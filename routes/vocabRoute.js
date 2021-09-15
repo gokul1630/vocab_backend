@@ -13,7 +13,6 @@ router.get('/', async (req, res) => {
 router.get('/search', async (req, res) => {
 	try {
 		const { query } = req.query
-		console.log(query)
 		let response = await axios(
 			`https://od-api.oxforddictionaries.com/api/v2/entries/en-gb/${query}`,
 			{
